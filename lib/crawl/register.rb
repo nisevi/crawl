@@ -37,7 +37,7 @@ class Crawl::Register
   end
 
   def finished?
-    @unprocessed.size + @processing.size == 0
+    (@unprocessed.size + @processing.size).zero?
   end
 
   def processing_size
@@ -45,7 +45,7 @@ class Crawl::Register
   end
 
   def error_pages
-    @processed.select{ |page| page.error }
+    @processed.select(&:error)
   end
 
   def errors?
@@ -59,7 +59,7 @@ class Crawl::Register
         puts page.to_s
       end
     else
-       puts "\n#{@processed.size} pages crawled without errors."
+      puts "\n#{@processed.size} pages crawled without errors."
     end
   end
 

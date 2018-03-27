@@ -1,4 +1,3 @@
-# encoding: utf-8
 class Crawl::Failure
   attr_reader :link, :code, :from
 
