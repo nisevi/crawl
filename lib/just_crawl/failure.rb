@@ -1,4 +1,4 @@
-class Crawl::Failure
+class JustCrawl::Failure
   attr_reader :link, :code, :from
 
   def initialize(link, code, from)

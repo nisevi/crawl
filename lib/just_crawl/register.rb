@@ -1,4 +1,4 @@
-class Crawl::Register
+class JustCrawl::Register
 
   Result = Struct.new(:url, :object)
 

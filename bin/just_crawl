@@ -1,19 +1,19 @@
 #!/usr/bin/env ruby
 require 'optparse'
-require_relative '../lib/crawl.rb'
+require_relative '../lib/just_crawl.rb'
 
 EM.threadpool_size = 5
 
 options = {}
 optparse = OptionParser.new do |opts|
-  opts.banner = "Crawl pages within a domain, reporting any page that returns a bad response code\nUsage: crawl [options] domain"
+  opts.banner = "JustCrawl pages within a domain, reporting any page that returns a bad response code\nUsage: just_crawl [options] domain"
   opts.on('-s', '--start /home,/about', Array, 'Starting path(s), defaults to /') { |o| options[:start] = o }
   opts.on('-u', '--username username', String, 'Basic auth username') { |o| options[:username] = o }
   opts.on('-p', '--password password', String, 'Basic auth password') { |o| options[:password] = o }
   opts.on('-c', '--connections count', Integer, "Max mumber of parallel connections to use. The default is #{EM.threadpool_size}.") { |o| EM.threadpool_size = o }
   opts.on('-v', '--verbose', 'Give details when crawling') { |o| $verbose = o }
   opts.on_tail('-h', '--help', 'Show this message') { |o| puts opts; exit }
-  opts.on_tail('-v', '--version', 'Print version') { |o| puts Crawl::VERSION; exit }
+  opts.on_tail('-v', '--version', 'Print version') { |o| puts JustCrawl::VERSION; exit }
 end.parse!
 
 options.merge!(domain: optparse.first)
@@ -25,10 +25,10 @@ end
 
 options[:domain] = "http://#{options[:domain]}" unless options[:domain].include?('://')
 
-crawler = Crawl::Engine.new(options)
+crawler = JustCrawl::Engine.new(options)
 
 trap('SIGINT') do
-  puts "\n\nAborting crawl.."
+  puts "\n\nAborting just_crawl.."
   crawler.summarize
   exit -1
 end

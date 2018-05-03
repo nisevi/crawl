@@ -1,4 +1,4 @@
-class Crawl::Engine
+class JustCrawl::Engine
   DEFAULT_OPTIONS = {
     domain:  '',
     start: ['/'],
@@ -18,7 +18,7 @@ class Crawl::Engine
   def initialize(caller_options = {})
     @options = DEFAULT_OPTIONS.merge(caller_options)
     @authorization = Base64.encode64("#{options[:username]}:#{options[:password]}")
-    @register = Crawl::Register.new
+    @register = JustCrawl::Register.new
 
     start_pages = options[:start].to_a.map { |page| Page.new(@register, page, '/') }
 
