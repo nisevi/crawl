@@ -16,6 +16,10 @@ Gem::Specification.new do |gem|
   gem.licenses      = ['MIT']
   gem.add_dependency 'nokogiri', '~> 1.8', '>= 1.8.2'
   gem.add_dependency 'rest-client', '~> 2.0', '>= 2.0.2'
-  gem.add_dependency 'eventmachine', '~> 1.2', '>= 1.2.5'
+  gem.add_dependency 'eventmachine', '~> 1.2', '>= 1.2.6'
   gem.add_dependency 'em-http-request', '~> 1.1', '>= 1.1.5'
+  gem.add_development_dependency 'rspec-core', '~> 3.7', '>= 3.7.1'
+  gem.add_development_dependency 'rspec-expectations', '~> 3.7'
+  gem.add_development_dependency 'simplecov', '~> 0.16.1'
+  gem.add_development_dependency 'rspec_junit_formatter', '~> 0.3.0'
 end
