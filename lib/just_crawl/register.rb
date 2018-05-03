@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class JustCrawl::Register
 
   Result = Struct.new(:url, :object)

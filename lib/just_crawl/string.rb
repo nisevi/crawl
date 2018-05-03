@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class String
   def word_wrap(line_width = 80)
     split("\n").collect do |line|
