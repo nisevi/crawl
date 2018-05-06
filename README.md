@@ -4,7 +4,23 @@
 
 JustCrawl crawls pages within a domain, reporting any page that returns a bad response code
 
-Usage:
+## Installation
+
+Add this line to your application's Gemfile:
+
+```ruby
+gem 'just_crawl'
+```
+
+And then execute:
+
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install just_crawl
+
+## Usage
 
     > just_crawl [options] domain
 
@@ -19,7 +35,7 @@ Usage:
 
 
 
-Example:
+### Example
 
     > just_crawl https://vaskohandmade.com --connections=5 --start=/ --verbose
 
@@ -51,5 +67,5 @@ Example:
     Fetching assets/custom/images/vasko/portfolio/booster-simil-rc-booster.jpg ...
     Fetching assets/custom/images/vasko/portfolio/amplificador-blues-mojo-7w-valvular.jpg ...
     Fetching assets/custom/images/vasko/portfolio/rehousing-fender-super-champ.jpg ...
-     
+
     14 pages crawled without errors.

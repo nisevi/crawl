@@ -59,9 +59,7 @@ class JustCrawl::Engine
 
   def retrieve(page)
     puts "Fetching #{page.url} ..." if $verbose
-
     absolute_url = options[:domain] + page.relative_url
-
     http = EventMachine::HttpRequest.new(absolute_url)
     req = http.get redirects: MAX_REDIRECTS,
                    connect_timeout: 20,
