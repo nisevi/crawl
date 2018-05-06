@@ -1,4 +1,4 @@
-[![Maintainability](https://api.codeclimate.com/v1/badges/b80b16674ad2bbc4e8d9/maintainability)](https://codeclimate.com/github/nisevi/just_crawl/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/b80b16674ad2bbc4e8d9/test_coverage)](https://codeclimate.com/github/nisevi/just_crawl/test_coverage) [![Build Status](https://semaphoreci.com/api/v1/nisevi/just_crawl/branches/master/shields_badge.svg)](https://semaphoreci.com/nisevi/just_crawl)
+[![Maintainability](https://api.codeclimate.com/v1/badges/b80b16674ad2bbc4e8d9/maintainability)](https://codeclimate.com/github/nisevi/just_crawl/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/b80b16674ad2bbc4e8d9/test_coverage)](https://codeclimate.com/github/nisevi/just_crawl/test_coverage) [![Build Status](https://semaphoreci.com/api/v1/nisevi/just_crawl/branches/master/shields_badge.svg)](https://semaphoreci.com/nisevi/just_crawl) [![Gem Version](https://badge.fury.io/rb/just_crawl.svg)](https://badge.fury.io/rb/just_crawl)
 
 # JustCrawl
 
